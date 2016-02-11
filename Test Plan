@@ -1,0 +1,31 @@
+Test Plan: 
+
+Login:
+Verify that Service consumer can login successfully with legal credential
+Verify that service consumer cannot login without credential
+Verify that service consumer cannot login if credential is not correct
+
+User Creation:
+Verify that service consumer can create user  successfully when all required info are provided
+Verify that our Web Service can handle the case gracefully if service consume provide us with only partial info needed for new users
+Verify that our web service can can handle the case gracefully if consumer tried to create a new user using an existing email
+
+Test Search
+Verify that consumer can query user info by using get {id}
+Verify that  all users are returned in the response when search age range covers all the users
+Verify that the correct set of users are returned when search age range covers a subset of all users
+Verify that  no user shall be returned when the start age is bigger than the oldest age in the user list
+Verify that no user shall be returned when the end age is less than the youngest age in the  user list
+Verify that web service can handle  illegal parameters gracefully ( like when end_age < start_age)
+
+
+
+Test udpate: 
+ Verify that consumer can update email, first_name, last_name and age respectively
+ Verify that consumer can update more than one fields at the same time for specific user
+Verify that web service handles the case gracefully when the id passed over is an non-exist user. 
+
+
+Verify that web service responds quickly enough
+Verify that web service can handle heavy load. 
+
